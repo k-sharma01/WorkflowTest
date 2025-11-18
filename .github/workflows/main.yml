@@ -1,0 +1,14 @@
+name: Hello CI
+  on:
+    push:
+      branches:
+      - main
+      
+  jobs:
+    build-and-test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
+        - name: Print to Config File
+          run: echo "Hello from GitHub Actions!"
